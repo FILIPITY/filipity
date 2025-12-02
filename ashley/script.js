@@ -1,6 +1,6 @@
 const links = [
-    { name: "GitHub", url: "https://github.com/FILIPITY/" },
-    { name: "YouTube", url: "https://ko-fi.com/filipity" },
+    { name: "GitHub", url: "https://github.com/LeevJeevs/" },
+    { name: "YouTube", url: "https://www.youtube.com/@leevjeevs" },
     { name: "Spotify", url: "https://open.spotify.com/artist/1CrX1ChORU0DEBNasGD6DD" },
     { name: "Apple Music", url: "https://music.apple.com/se/artist/leevjeevs/1825674336" },
     { name: "Discord", url: "https://discord.com/users/1291115997381525514" }
