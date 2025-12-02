@@ -6,7 +6,7 @@
     font-family: "Inter", sans-serif;
 }
 
-/* --- DIAGONAL FLAG BACKGROUND --- */
+/* --- DIAGONAL FLAG BACKGROUND (STATIC, NO BLUR) --- */
 body {
     min-height: 100vh;
     display: flex;
@@ -38,10 +38,6 @@ body {
         #800080 880px 960px
     );
 
-    /* Slight blur overlay for readability */
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-
     background-attachment: fixed;
     background-size: cover;
 }
@@ -59,7 +55,10 @@ body {
     padding: 40px 30px 50px;
     text-align: center;
     overflow: hidden;
+
+    /* STRONGER BLUR THAN BACKGROUND */
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 /* Light glow overlay */
