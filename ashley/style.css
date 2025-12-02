@@ -6,13 +6,7 @@
     font-family: "Inter", sans-serif;
 }
 
-/* --- ANIMATED FLAG BACKGROUND --- */
-/* Colors:
-   Transfemme (soft trans variant): #5BCFFA #F5A9B8 #FFFFFF #F5A9B8 #5BCFFA
-   Panromantic: #FF1B8D #FFD900 #1BB3FF
-   Asexual: #000000 #A4A4A4 #FFFFFF #800080
-*/
-
+/* --- DIAGONAL FLAG BACKGROUND --- */
 body {
     min-height: 100vh;
     display: flex;
@@ -21,29 +15,38 @@ body {
     padding: 20px;
     color: #fff;
 
-    background: linear-gradient(
-        -45deg,
-        #5BCFFA,
-        #F5A9B8,
-        #FFFFFF,
-        #FF1B8D,
-        #FFD900,
-        #1BB3FF,
-        #000000,
-        #A4A4A4,
-        #800080
+    /* 3 FLAGS diagonal repeating stripes */
+    background: repeating-linear-gradient(
+        135deg, 
+        
+        /* --- TRANSFEMME --- */
+        #5BCFFA 0 80px,
+        #F5A9B8 80px 160px,
+        #FFFFFF 160px 240px,
+        #F5A9B8 240px 320px,
+        #5BCFFA 320px 400px,
+
+        /* --- PANROMANTIC --- */
+        #FF1B8D 400px 480px,
+        #FFD900 480px 560px,
+        #1BB3FF 560px 640px,
+
+        /* --- ASEXUAL --- */
+        #000000 640px 720px,
+        #A4A4A4 720px 800px,
+        #FFFFFF 800px 880px,
+        #800080 880px 960px
     );
-    background-size: 400% 400%;
-    animation: flagFlow 20s ease infinite;
+
+    /* Slight blur overlay for readability */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-@keyframes flagFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* --- CARD --- */
+/* --- CARD CONTAINER --- */
 .container {
     width: 100%;
     max-width: 500px;
@@ -57,16 +60,9 @@ body {
     text-align: center;
     overflow: hidden;
     backdrop-filter: blur(12px);
-
-    animation: floatCard 6s ease-in-out infinite;
 }
 
-@keyframes floatCard {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-/* Light shine overlay */
+/* Light glow overlay */
 .bg-overlay {
     position: absolute;
     inset: 0;
@@ -75,6 +71,7 @@ body {
     z-index: 0;
 }
 
+/* --- AVATAR --- */
 .avatar {
     width: 130px;
     height: 130px;
@@ -92,6 +89,7 @@ body {
     box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
+/* --- TEXT --- */
 h1 {
     font-size: 28px;
     margin-bottom: 10px;
