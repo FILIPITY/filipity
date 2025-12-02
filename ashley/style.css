@@ -6,7 +6,7 @@
     font-family: "Inter", sans-serif;
 }
 
-/* --- DIAGONAL FLAG BACKGROUND (STATIC, NO BLUR) --- */
+/* --- DIAGONAL FLAG BACKGROUND (STATIC + NOT BLURRED) --- */
 body {
     min-height: 100vh;
     display: flex;
@@ -15,10 +15,9 @@ body {
     padding: 20px;
     color: #fff;
 
-    /* 3 FLAGS diagonal repeating stripes */
     background: repeating-linear-gradient(
-        135deg, 
-        
+        135deg,
+
         /* --- TRANSFEMME --- */
         #5BCFFA 0 80px,
         #F5A9B8 80px 160px,
@@ -38,8 +37,11 @@ body {
         #800080 880px 960px
     );
 
-    background-attachment: fixed;
+    /* REMOVE THIS to prevent background movement */
+    /* background-attachment: fixed; */
+
     background-size: cover;
+    background-attachment: local; /* prevents parallax/movement */
 }
 
 /* --- CARD CONTAINER --- */
@@ -50,18 +52,16 @@ body {
 
 .card {
     position: relative;
-    background: rgba(20, 20, 20, 0.75);
     border-radius: 24px;
     padding: 40px 30px 50px;
     text-align: center;
     overflow: hidden;
 
-    /* STRONGER BLUR THAN BACKGROUND */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* Use a soft background without blurring flags behind */
+    background: rgba(20, 20, 20, 0.75);
 }
 
-/* Light glow overlay */
+/* OPTIONAL: subtle interior glow */
 .bg-overlay {
     position: absolute;
     inset: 0;
@@ -116,7 +116,6 @@ p {
 
     background: rgba(255,255,255,0.07);
     transition: all .25s ease;
-    backdrop-filter: blur(4px);
     z-index: 1;
     position: relative;
 }
