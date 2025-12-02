@@ -3,7 +3,7 @@ const links = [
     { name: "YouTube", url: "https://www.youtube.com/@leevjeevs" },
     { name: "Spotify", url: "https://open.spotify.com/artist/1CrX1ChORU0DEBNasGD6DD" },
     { name: "Apple Music", url: "https://music.apple.com/se/artist/leevjeevs/1825674336" },
-    { name: "Discord", url: "https://discord.com/users/1291115997381525514" }
+    { name: "Discord", url: "https://discord.com/users/1421563999677317201" }
 ];
 
 window.addEventListener("DOMContentLoaded", () => {
