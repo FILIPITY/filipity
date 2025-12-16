@@ -18,23 +18,26 @@ body {
     background: repeating-linear-gradient(
         135deg,
 
-        /* --- TRANSFEMME --- */
-        #5BCFFA 0 80px,
-        #F5A9B8 80px 160px,
-        #FFFFFF 160px 240px,
-        #F5A9B8 240px 320px,
-        #5BCFFA 320px 400px,
+background: repeating-linear-gradient(
+    135deg,
 
-        /* --- PANROMANTIC --- */
-        #FF1B8D 400px 480px,
-        #FFD900 480px 560px,
-        #1BB3FF 560px 640px,
+    /* --- FEMBOY FLAG --- */
+    #F4A9C8 0 80px,
+    #FFFFFF 80px 160px,
+    #9AD9EA 160px 240px,
+    #FFFFFF 240px 320px,
+    #F4A9C8 320px 400px,
 
-        /* --- ASEXUAL --- */
-        #000000 640px 720px,
-        #A4A4A4 720px 800px,
-        #FFFFFF 800px 880px,
-        #800080 880px 960px
+    /* --- PANROMANTIC --- */
+    #FF1B8D 400px 480px,
+    #FFD900 480px 560px,
+    #1BB3FF 560px 640px,
+
+    /* --- ASEXUAL --- */
+    #000000 640px 720px,
+    #A4A4A4 720px 800px,
+    #FFFFFF 800px 880px,
+    #800080 880px 960px
     );
 
     /* REMOVE THIS to prevent background movement */
