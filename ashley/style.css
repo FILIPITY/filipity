@@ -19,23 +19,25 @@ background: repeating-linear-gradient(
     135deg,
 
     /* --- FEMBOY FLAG --- */
-    #F4A9C8 0 80px,
-    #FFFFFF 80px 160px,
-    #9AD9EA 160px 240px,
-    #FFFFFF 240px 320px,
-    #F4A9C8 320px 400px,
+    #D26CAA 0 57px,   /* Dark pink top */
+    #EAB9D3 57px 114px, /* Light pink */
+    #FFFFFF 114px 171px, /* White */
+    #7BD8F6 171px 228px, /* Light blue */
+    #FFFFFF 228px 285px, /* White */
+    #EAB9D3 285px 342px, /* Light pink */
+    #D26CAA 342px 399px, /* Dark pink bottom */
 
     /* --- PANROMANTIC --- */
-    #FF1B8D 400px 480px,
-    #FFD900 480px 560px,
-    #1BB3FF 560px 640px,
+    #FF1B8D 399px 479px,
+    #FFD900 479px 559px,
+    #1BB3FF 559px 639px,
 
     /* --- ASEXUAL --- */
-    #000000 640px 720px,
-    #A4A4A4 720px 800px,
-    #FFFFFF 800px 880px,
-    #800080 880px 960px
-    );
+    #000000 639px 719px,
+    #A4A4A4 719px 799px,
+    #FFFFFF 799px 879px,
+    #800080 879px 959px
+);
 
     /* REMOVE THIS to prevent background movement */
     /* background-attachment: fixed; */
