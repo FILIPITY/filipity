@@ -41,6 +41,19 @@
             font-size: 3rem;
             margin-bottom: 2rem;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+            border-right: 3px solid #fff;
+            white-space: nowrap;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        h1.typing-done {
+            border-right: none;
+            animation: none;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
         }
 
         .links {
@@ -77,12 +90,12 @@
     <canvas id="canvas"></canvas>
     
     <div class="content">
-        <h1>My Links</h1>
+        <h1 id="title"></h1>
         <div class="links">
-            <a href="#" class="link-btn">Link One</a>
-            <a href="#" class="link-btn">Link Two</a>
-            <a href="#" class="link-btn">Link Three</a>
-            <a href="#" class="link-btn">Link Four</a>
+            <a href="https://www.youtube.com/@filipity" target="_blank" class="link-btn">YouTube</a>
+            <a href="https://github.com/FILIPITY" target="_blank" class="link-btn">GitHub</a>
+            <a href="https://discord.com/users/1291115997381525514" target="_blank" class="link-btn">Discord</a>
+            <a href="https://ko-fi.com/filipity" target="_blank" class="link-btn">Ko-fi</a>
         </div>
     </div>
 
@@ -197,6 +210,25 @@
 
         init();
         animate();
+
+        // Typewriter effect
+        const title = document.getElementById('title');
+        const text = 'Filipity';
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                title.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 150);
+            } else {
+                setTimeout(() => {
+                    title.classList.add('typing-done');
+                }, 500);
+            }
+        }
+
+        typeWriter();
     </script>
 </body>
 </html>
