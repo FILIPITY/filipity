@@ -89,6 +89,10 @@
 <body>
     <canvas id="canvas"></canvas>
     
+    <audio id="bgMusic" loop>
+        <source src="Homecoming.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="content">
         <h1 id="title"></h1>
         <div class="links">
@@ -207,6 +211,20 @@
             targetRotX = ((my / h) - 0.5) * 0.3;
             targetRotY = ((mx / w) - 0.5) * 0.3;
         });
+
+        // Play music on first interaction
+        let musicStarted = false;
+        const bgMusic = document.getElementById('bgMusic');
+        
+        function startMusic() {
+            if (!musicStarted) {
+                bgMusic.play().catch(e => console.log('Autoplay prevented'));
+                musicStarted = true;
+            }
+        }
+        
+        document.body.addEventListener('click', startMusic, { once: true });
+        document.body.addEventListener('keydown', startMusic, { once: true });
 
         init();
         animate();
