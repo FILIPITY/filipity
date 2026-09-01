@@ -16,3 +16,5 @@ Website: https://filipity.xyz/
 GitHub: https://github.com/
 
 That's pretty much it.
+
+Im trying not to use AI as much..
